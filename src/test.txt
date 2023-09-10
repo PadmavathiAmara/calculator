@@ -1,0 +1,23 @@
+const newNumbers = [...numbers,Number(num)]
+    let res = newNumbers.reduce((acc,n,i)=>{
+      if(i==0){
+        return acc+n;
+      }
+      else{
+        if(op[i-1]=="+"){
+          return acc+n;
+        }
+        else if(op[i-1]=="-"){
+          return acc-n;
+        }
+        else if(op[i-1]=="*"){
+          return acc*n;
+        }
+        else if(op[i-1]=="/"){
+          return acc/n;
+        }
+        else{
+          return acc%n;
+        } 
+      }
+    },0);
